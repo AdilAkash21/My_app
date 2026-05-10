@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* REQUIRED for class-based dark mode in Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Fade-in-up animation for hero section */
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  /* Floating animation - gentle up and down */
+  --animate-float: float 3s ease-in-out infinite;
+}
+
+/* Keyframes for fade-in-up effect */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for floating effect */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Smooth theme transition */
+html {
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  background-color: #020617;
+}
+
+/* Global 0.6s transitions for all properties */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, transform;
+  transition-timing-function: ease;
+  transition-duration: 0.6s;
+}
+
+/* Disable transitions when needed */
+.no-transition * {
+  transition: none !important;
+}
