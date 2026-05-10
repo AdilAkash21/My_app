@@ -35,5 +35,37 @@ A modern, responsive SaaS landing page built with **React**, **Vite**, **Tailwin
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/AdilAkash21/nexusflow.git
+   git clone [https://github.com/AdilAkash21/nexusflow.git](https://github.com/AdilAkash21/My_app/tree/main/my-app)
    cd nexusflow
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+
+3. **Run development server**
+
+   ```bash
+   npm run dev
+   
+4. **Build for production**
+
+   ```bash
+   npm run build
+
+## 📂 Project Structure
+
+```plaintext
+my-app/
+├── index.html              # Root HTML entry + theme preload script
+├── postcss.config.js       # PostCSS setup with @tailwindcss/postcss
+├── src/                    # Application source code
+│   ├── main.jsx            # React entry point
+│   ├── App.jsx             # Main app component
+│   ├── index.css           # Tailwind CSS + custom animations
+│   ├── components/         # Reusable UI components (Navbar, Hero, etc.)
+│   ├── pages/              # Page-level components (Home, Pricing, Contact)
+│   └── assets/             # Static assets (images, icons)
+└── package.json            # Project metadata + dependencies
+
+
